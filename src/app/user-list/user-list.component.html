@@ -1,0 +1,32 @@
+<div class="container">
+<table class="table table-striped">
+    <tr>
+      <th class="p-2">SlNo</th>
+      <th class="p-2">Name</th>
+      <th class="p-2">Username</th>
+      <th class="p-2">Email</th>
+      <th class="p-2">Address</th>
+      <th class="p-2">Phone</th>
+      <th class="p-2">Website</th>
+      <th class="p-2">Company Name</th>
+    </tr>
+    <tr *ngFor="let item of dataList ; let i = index">
+      <td class="p-2">{{i+1}}</td>
+      <td class="p-2">{{item.name}}</td>
+      <td class="p-2">{{item.username}}</td>
+      <td class="p-2">{{item.email}}</td>
+      <td class="p-2"><ul>
+        <li>street: {{item.address.street}}</li>
+        <li>city: {{item.address.city}}</li>
+        <li>Zipcode: {{item.address.zipcode}}</li>
+        <li>lantitude: {{item.address.geo.lat}}</li>
+        <li>longitude: {{item.address.geo.lng}}</li>
+      </ul>
+         </td>
+      <td class="p-2">{{item.phone}}</td>
+      <td class="p-2">{{item.website}}</td>
+      <td class="p-2">{{item.company.name}}</td>
+    </tr>
+  </table>
+  
+</div>  
